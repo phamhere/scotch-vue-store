@@ -10,9 +10,11 @@
           <div class="product-details__description">
             <small>{{product.manufacturer && product.manufacturer.name}}</small>
             <h3>{{product.name}}</h3>
-            <p>
-              {{product.description}}
-            </p>
+            <div>  
+              <p>
+                {{product.description}}
+              </p>
+            </div>
           </div>
           <div class="product-details__price-cart">
             <p>${{product.price}}</p>
@@ -40,10 +42,6 @@
     padding: 30px 0;
   }
 
-  .product-details__image {
-
-  }
-
   .product-details__description {
     padding-top: 30px;
   }
@@ -56,6 +54,10 @@
     margin: 5px 0 30px 0;
   }
 
+  .product-details__description  {
+    columns: 2;
+  }
+
   .product-details__price-cart {
     display: flex;
     padding-top: 30px;
@@ -65,5 +67,13 @@
     flex-grow: 2;
     font-size: 20px;
     font-weight: bold;
+  }
+
+  img {
+    transition: transform 0.25s;
+  }
+
+  img:active {
+    transform: scale(1.5);
   }
 </style>

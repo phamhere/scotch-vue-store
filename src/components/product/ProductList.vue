@@ -3,7 +3,7 @@
     <div class="products">
       <div class="container">
         <template v-for="product in products">
-          <product-item :product="product"></product-item>
+          <product-item :product="product" :key="product"></product-item>
         </template>
       </div>
     </div>
